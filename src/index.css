@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+/* Paleta: fondo casi negro, acento lima (buen contraste en exteriores). */
+@theme {
+  --color-bg: #0b0d12;
+  --color-surface: #151922;
+  --color-surface-2: #1e2430;
+  --color-line: #2a3140;
+  --color-text: #e8ebf1;
+  --color-muted: #8d96a8;
+  --color-accent: #a3e635;
+  --color-accent-ink: #11160a;
+  --color-danger: #f87171;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Inputs numéricos sin flechas (se usan botones grandes +/-). */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Filas de chips desplazables sin barra visible. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
